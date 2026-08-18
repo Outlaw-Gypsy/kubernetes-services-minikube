@@ -1,0 +1,16 @@
+apiVersion: v1 
+kind: Service
+
+metadata:
+  name: clusterip-backend-service
+
+spec:
+  selector:
+    app: backend
+
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+  
+  type: ClusterIP
